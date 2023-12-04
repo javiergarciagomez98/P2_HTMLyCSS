@@ -1,0 +1,138 @@
+* {
+    font-family: 'Fira Sans', sans-serif;
+
+    --main-color: #5865F2;
+    --secondary-color: #070e58;
+    --secondary-color-alpha: 8, 14, 89;
+    --hover-color: #a4f479;
+}
+
+html {
+    width: auto;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Home */
+.home__body {
+    background: url(/img/home-hero.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home__header {
+    display: flex;
+    width: auto;
+    height: auto;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__navbar-links--container {
+    display: flex;
+    text-align: center;
+    padding: 0 3.5rem;
+    background-color: rgba(var(--secondary-color-alpha), 0.7);
+    
+}
+
+.home__navbar ul li {
+    margin: 2rem 0.75rem;
+}
+
+.home__navbar-links {
+    color: white;
+    font-size: 26px;
+   
+}
+
+.home__navbar-links:hover {
+    color: var(--hover-color);
+    transition: ease-in-out 0.2s;
+}
+
+.home__section {
+    display: block;
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.home__logo {
+    width: auto;
+    height: auto;
+    margin-top: 5.6rem;
+    max-width: 620px;
+}
+
+.home__title {
+    margin-top: 1.75rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+
+    color: white;
+    font-size: 96px;
+    font-weight: 900;
+
+    text-shadow: 1px 1px 2px black;
+}
+
+.home__footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.home__footer-links--container {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__footer-links {
+    margin: 0 0.65rem;
+    color: white;
+}
+
+.home__footer-links:hover {
+    color: var(--hover-color);
+    transition: ease-in-out 0.2s;
+}
+
+.home__footer p {
+    margin-top: 1.2rem;
+    margin-bottom: 3.2rem;
+    font-size: 12px;
+    font-weight: 300;
+    color: white;
+}
+
+.home__footer-link--midjourney {
+    color: var(--hover-color);
+}
