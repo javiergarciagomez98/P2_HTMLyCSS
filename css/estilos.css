@@ -7,9 +7,6 @@
 
 html {
     font-family: 'Fira Sans', sans-serif;
-    width: auto;
-    height: 100%;
-    margin: 0;
 }
 
 body {
@@ -20,12 +17,39 @@ body {
     padding: 0;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2, p, dt, dd {
+    color: var(--secondary-color);
+}
+
+p {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
 
+
+figcaption {
+    margin-top: 0.25rem;
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
 ul {
     list-style: none;
+}
+
+article {
+    width: 80%;
+    max-width: 1050px;
 }
 
 
@@ -60,8 +84,7 @@ ul {
 
 .home__navbar-links {
     color: white;
-    font-size: 26px;
-   
+    font-size: 1.6rem;
 }
 
 .home__navbar-links:hover {
@@ -93,7 +116,7 @@ ul {
     max-width: 1300px;
 
     color: white;
-    font-size: 96px;
+    font-size: 6rem;
     font-weight: 900;
 
     text-shadow: 1px 1px 2px black;
@@ -132,11 +155,187 @@ ul {
 .home__footer p {
     margin-top: 1.2rem;
     margin-bottom: 3.2rem;
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: 300;
     color: white;
 }
 
 .home__footer-link--midjourney {
+    color: var(--main-color);
+}
+
+.home__footer-link--midjourney:hover {
     color: var(--hover-color);
+}
+
+
+/* Header and footer from info, calendar and tickets */
+.header__container {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+    background: url(/img/amped_header.jpg) no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar__container {
+    display: block;
+    text-align: center;
+    margin: 1.5rem;
+    padding: 0 5.15rem;
+    background-color: rgba(var(--secondary-color-alpha), 0.7);
+}
+
+.navbar__logo {
+    margin-top: 0.8rem;
+    width: 250px;
+    height: auto;
+}
+
+.navbar__links-container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__links-container li {
+    margin: 1rem 1.2rem 1.75rem 1.2rem;
+}
+
+.navbar__links {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.navbar__links:hover {
+    color: var(--hover-color);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.navbar__links-active {
+    font-size: 1.25rem;
+    padding-bottom: 0.45rem;
+    border-bottom: solid 1px var(--hover-color);
+    color: var(--hover-color);
+}
+
+.footer {
+    display: block;
+    width: auto;
+    height: auto;
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    background-color: var(--secondary-color);
+}
+
+.footer__container {
+    display: flex;
+    margin-left: 21%;
+    padding: 0;
+}
+
+.footer__links {
+    margin-right: 1.2rem;
+    font-weight: 300;
+    color: white;
+}
+
+.footer__links:hover {
+    color: var(--hover-color);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.footer__copy-text {
+    margin: 1rem 0;
+    margin-left: 21%;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: white;
+}
+
+
+/* Info */
+.info__group-section {
+    display: block;
+    margin-top: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+}
+
+.info__group-title {
+    text-align: center;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.info__group-description {
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.info__group-video--container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.info__group-video {
+    height: 420px;
+}
+
+.info__artists-section {
+    display: block;
+    margin-top: 2rem;
+}
+
+.info__artists-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.info__artists-description {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.info__artists-list {
+    margin: 0 2.5rem;
+}
+
+.info__artists-list--title {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.info__artists-list--detail {
+    margin: 0;
+    padding: 0 2rem;
+    border-left: solid 1px var(--secondary-color);
+}
+
+.info__artists-list--detail p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5rem;
 }
