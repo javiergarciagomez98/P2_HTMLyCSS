@@ -330,7 +330,7 @@ article {
 .info__artists-list--detail {
     margin: 0;
     padding: 0 2rem;
-    border-left: solid 1px var(--secondary-color);
+    border-left: solid 1px var(--main-color);
 }
 
 .info__artists-list--detail p {
