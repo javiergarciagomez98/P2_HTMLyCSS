@@ -23,8 +23,21 @@ main {
     align-items: center;
 }
 
-h2, p, dt, dd {
+h2, h3, p, dt, dd {
     color: var(--secondary-color);
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 p {
@@ -34,7 +47,6 @@ p {
 a {
     text-decoration: none;
 }
-
 
 figcaption {
     margin-top: 0.25rem;
@@ -51,6 +63,32 @@ article {
     width: 80%;
     max-width: 1050px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;    
+}
+
+caption {
+    padding: 0.8rem 0 0.8rem 0;
+    color: var(--secondary-color);
+    font-weight: 700;
+
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+th, td {
+    padding: 0.5rem 0 0.5rem 0.3rem;
+    text-align: start;
+    color: var(--secondary-color);
+    font-weight: 300;
+}
+
+tr:nth-child(even) {
+    background-color: var(--hover-color);
+}
+
 
 
 /* Home */
@@ -275,13 +313,6 @@ article {
     max-width: 800px;
 }
 
-.info__group-title {
-    text-align: center;
-    margin: 0;
-    font-size: 3.5rem;
-    font-weight: 900;
-}
-
 .info__group-description {
     font-size: 1.25rem;
     margin-top: 0.8rem;
@@ -303,12 +334,6 @@ article {
 .info__artists-section {
     display: block;
     margin-top: 2rem;
-}
-
-.info__artists-title {
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
 }
 
 .info__artists-description {
@@ -338,4 +363,40 @@ article {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
+}
+
+/* Calendar */
+.calendar__section-description {
+    margin: 3rem 5rem 1rem 5rem;
+}
+
+.calendar__title {
+    margin-bottom: 1rem;
+}
+
+.calendar__description {
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.calendar__table-row--categories {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.calendar__table-row--warning {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.calendar__table-description--warning {
+    font-size: 0.75rem;
+    background-color: white;
+}
+
+.calendar__info-link {
+    color: var(--main-color);
+    text-decoration: underline dotted;
+    text-decoration-thickness: 0.025rem;
+    text-underline-offset: 0.25rem;
 }
