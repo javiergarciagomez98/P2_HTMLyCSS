@@ -488,7 +488,11 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
     line-height: 2rem;
 }
 
-.tickets__form-container section{
+.tickets__form fieldset {
+    margin-bottom: 2rem;
+}
+
+.tickets__form section {
     margin-bottom: 1.25rem;
 }
 
