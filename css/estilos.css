@@ -1,5 +1,6 @@
 :root {
     --main-color: #5865F2;
+    --main-color-alpha: 89, 102, 243;
     --secondary-color: #070e58;
     --secondary-color-alpha: 8, 14, 89;
     --hover-color: #a4f479;
@@ -23,40 +24,49 @@ main {
     align-items: center;
 }
 
-h2, h3, p, dt, dd {
-    color: var(--secondary-color);
-}
 
 h2 {
-    text-align: center;
     margin: 0;
     font-size: 3.5rem;
     font-weight: 900;
+    text-align: center;
+
+    color: var(--secondary-color);
 }
 
 h3 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
+
+    color: var(--secondary-color);
 }
 
 p {
     margin: 0;
+    color: var(--secondary-color);
 }
 
 a {
     text-decoration: none;
 }
 
+dt, dd {
+    color: var(--secondary-color);
+}
+
 figcaption {
     margin-top: 0.25rem;
-    color: var(--secondary-color);
     font-size: 0.8rem;
     font-weight: 300;
+    
+    color: var(--secondary-color);
 }
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 article {
@@ -89,6 +99,70 @@ tr:nth-child(even) {
     background-color: var(--hover-color);
 }
 
+
+legend {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    margin: 0;
+    padding: 1rem 1rem 2.5rem 1rem;
+
+    border: 0;
+    background-color: rgba(var(--main-color-alpha), 0.25);
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+span {
+    color: red;
+}
+
+input {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.55rem;
+
+    border: 0;
+    border-radius: 3px;
+}
+
+select {
+    width: 100%;
+    margin: 0.8rem 0;
+    padding: 0.5rem 0.5rem;
+
+    border: 0;
+    border-radius: 3px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+
+    border-radius: 3px;
+    border-color: lightgray;
+}
+
+input[type="text"]:required:invalid:not(:placeholder-shown) {
+    border: 1px solid red;
+}
+
+input[type="text"]:required:valid:not(:placeholder-shown) {
+    border: 1px solid green;
+}
 
 
 /* Home */
@@ -399,4 +473,133 @@ tr:nth-child(even) {
     text-decoration: underline dotted;
     text-decoration-thickness: 0.025rem;
     text-underline-offset: 0.25rem;
+}
+
+
+/* Tickets */
+.tickets__description-container {
+    margin: 4rem;
+}
+
+.tickets__description {
+    font-size: 1.25rem;
+    margin-top: 0.8rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.tickets__form-container section{
+    margin-bottom: 1.25rem;
+}
+
+.tickets__form-personal--info_field {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tickets__form-personal--info_field p {
+    margin: 1rem 1rem 0 0 ;
+}
+
+.tickets__form-ticket--type_description {
+    font-size: 1rem;
+    margin: 0.8rem 0;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.tickets__form-payment--type_field li{
+    margin: 1rem 0;
+}
+
+.tickets__form-payment--type_field input {
+    width: auto;
+    height: auto;
+
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.tickets__form-payment--info_field {
+    display: grid;
+    gap: 1.5rem;
+    padding-right: 2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.tickets__form-payment--info_field p{
+    margin: 0;
+}
+
+
+.tickets__form-direction--info_field {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1.5rem;
+}
+
+.tickets__form-direction--info_direction {
+    margin-right: 1rem;
+    grid-column: span 3;
+}
+
+.tickets__form-direction--info_field select{
+    margin: 0.5rem 0;
+}
+
+
+.tickets__form-terms--conditions p{
+    display: flex;
+}
+
+.tickets__form-terms--conditions input {
+    margin: 0;
+    width: auto;
+    height: auto;
+}
+
+.tickets__form-terms--conditions label{
+    margin: 0 1rem;
+}
+
+.tickets__form-terms--conditions a {
+    color: var(--main-color);
+    text-decoration: underline dotted;
+    text-decoration-thickness: 0.025rem;
+    text-underline-offset: 0.25rem;
+}
+
+.tickets__form-terms--conditions a:hover {
+    color: var(--hover-color);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.tickets__form-purchase--button {
+    margin-top: 3rem;
+}
+
+.tickets__form-purchase--button input {
+    width: 100%;
+    padding: 1rem;
+
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+
+.tickets__form-purchase--button input:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
 }
