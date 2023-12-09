@@ -99,13 +99,6 @@ tr:nth-child(even) {
     background-color: var(--hover-color);
 }
 
-
-legend {
-    color: var(--secondary-color);
-    font-weight: 700;
-    font-size: 1.25rem;
-}
-
 form {
     margin: 0;
     padding: 0;
@@ -118,6 +111,12 @@ fieldset {
     border: 0;
     background-color: rgba(var(--main-color-alpha), 0.25);
     border-radius: 5px;
+}
+
+legend {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 label {
@@ -388,8 +387,8 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
 }
 
 .info__group-description {
-    font-size: 1.25rem;
     margin-top: 0.8rem;
+    font-size: 1.25rem;
     font-weight: 300;
     line-height: 2rem;
 }
@@ -449,17 +448,14 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
 }
 
 .calendar__description {
-    font-size: 1.25rem;
     margin-top: 0.8rem;
+    font-size: 1.25rem;
     font-weight: 300;
     line-height: 2rem;
 }
 
-.calendar__table-row--categories {
-    border-bottom: 1px solid var(--main-color);
-}
-
-.calendar__table-row--warning {
+.calendar__table-row--categories,
+.calendar__table-row--warning{
     border-bottom: 1px solid var(--main-color);
 }
 
@@ -482,8 +478,8 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
 }
 
 .tickets__description {
-    font-size: 1.25rem;
     margin-top: 0.8rem;
+    font-size: 1.25rem;
     font-weight: 300;
     line-height: 2rem;
 }
@@ -507,8 +503,8 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
 }
 
 .tickets__form-ticket--type_description {
-    font-size: 1rem;
     margin: 0.8rem 0;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
 }
@@ -536,7 +532,6 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
     margin: 0;
 }
 
-
 .tickets__form-direction--info_field {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
@@ -551,7 +546,6 @@ input[type="text"]:required:valid:not(:placeholder-shown) {
 .tickets__form-direction--info_field select{
     margin: 0.5rem 0;
 }
-
 
 .tickets__form-terms--conditions p{
     display: flex;
